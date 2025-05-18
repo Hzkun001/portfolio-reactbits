@@ -9,6 +9,7 @@ import Squares from "./components/Squares/Squares";
 import GradientText from "./components/GradientText/GradientText";
 import CircularText from "./components/CircularText/CircularText";
 import { Timeline } from "./components/Timelines/Timeline";
+import PixelTrail from "./components/PixelTrail/PixelTrail";
 export default function Home() {
   const data = [
     {
@@ -154,7 +155,18 @@ export default function Home() {
   ];
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#19222D]">
+      <div className="fixed inset-0 w-screen h-screen pointer-events-none z-0">
+  <PixelTrail
+    gridSize={60}
+    trailSize={0.06}
+    maxAge={250}
+    interpolate={5.0}
+    color="##00d8ff"
+    gooeyFilter={{ id: "custom-goo-filter", strength: 2 }}
+  />
+</div>
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
+        
        {/* <SplashCursor /> */}
       <Squares 
         speed={0.5} 
@@ -163,6 +175,7 @@ export default function Home() {
         borderColor='##38b6ff'
         hoverFillColor='#393be5'
         />
+        
       </div>
     <div className="container mx-auto h-screen">
       <div className="grid grid-cols-12">
@@ -235,8 +248,7 @@ export default function Home() {
                 Collaborate On Github
               </a>
             </GradientText>
-
-              </div>
+            </div>
           </div>
           </div>
 
@@ -250,6 +262,7 @@ export default function Home() {
             spinDuration={20}
             className="absolute top-60 right-28"
           />
+          
         </div>
       </div>
     </div>
