@@ -193,10 +193,10 @@ export default function Home() {
           threshold={0.2}
           >
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl text-white font-bold">I'm Ready for Team</h1>
-            <RotatingText
+            <div><h1 className="text-xl sm:text-2xl md:text-2xl lg:text-2xl text-white font-bold transition-all ease-in-out">I'm Ready for Team</h1></div>
+            <div><RotatingText
               texts={['Reverse Engineer', 'Developer', 'Trader']}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-[#393be5] text-white overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold 
+              mainClassName="px-2 sm:px-2 md:px-3 bg-[#393be5] text-white overflow-hidden py-0.5 sm:py-1 justify-end rounded-lg text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold 
               inline-flex transition-all"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -206,14 +206,14 @@ export default function Home() {
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={2000}
-              />
+              /></div>
           </div>
           </AnimatedContent>
           
           <div className="flex flex-col items-start">
             <SplitText
             text="I'm Akhmad Hafidz Ardianto"
-            className="text-3xl font-semibold text-start "
+            className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-semibold text-start "
             delay={50}
             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
             animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -222,7 +222,7 @@ export default function Home() {
             />
             <SplitText
             text="Full stack Developer"
-            className="text-3xl font-semibold text-start text-[#393be5] "
+            className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-semibold text-start text-[#393be5] mt-4"
             delay={75}
             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
             animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -236,14 +236,14 @@ export default function Home() {
               delay={90}
               animateBy="words"
               direction="top"
-              className="text-xl mb-8"
+              className="text-md sm:text-xl md:text-xl lg:text-xl mb-8"
               />
               <div className="flex items-center">
             <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              colors={["#40ffaa", "#393be5", "#40ffaa", "#393be5", "#40ffaa"]}
               animationSpeed={1}
               showBorder={true}
-              className="px-8 py-6 rounded-lg">
+              className="px-3 py-5 sm:px-8 rounded-lg">
               <a href="https://github.com/Hzkun001">
                 Collaborate On Github
               </a>
