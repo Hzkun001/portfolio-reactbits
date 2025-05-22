@@ -213,7 +213,7 @@ export default function Home() {
           <div className="flex flex-col items-start">
             <SplitText
             text="I'm Akhmad Hafidz Ardianto"
-            className="text-5xl font-semibold text-start "
+            className="text-3xl font-semibold text-start "
             delay={50}
             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
             animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -222,7 +222,7 @@ export default function Home() {
             />
             <SplitText
             text="Full stack Developer"
-            className="text-5xl font-semibold text-start text-[#393be5] "
+            className="text-3xl font-semibold text-start text-[#393be5] "
             delay={75}
             animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
             animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -236,7 +236,7 @@ export default function Home() {
               delay={90}
               animateBy="words"
               direction="top"
-              className="text-2xl mb-8"
+              className="text-xl mb-8"
               />
               <div className="flex items-center">
             <GradientText
@@ -255,14 +255,14 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 relative">
-          <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]}/>
+          {/* CircularText di depan Lanyard dengan z-10 */}
           <CircularText
             text="Fullstack*Developer*"
             onHover="speedUp"
             spinDuration={20}
-            className="absolute top-60 right-28"
+            className="absolute top-2 right-1 w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] z-10"
           />
-          
+          <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]}/>
         </div>
       </div>
     </div>
